@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kayumov Asadbek — Student Portfolio</title>
+  <meta name="description" content="Student portfolio — projects, CV and contact." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Your Name — Student Portfolio" />
+  <meta property="og:description" content="Student portfolio — projects, CV and contact." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b51a9" />
+  <style>
+    :root{
+      --bg:#f7f8fa; --card:#ffffff; --accent:#0b51a9; --muted:#5b6770;
+      --maxW:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg); color:#111;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{max-width:var(--maxW); margin:0 auto; padding:28px;}
+    header.hero{
+      display:flex; gap:20px; align-items:center; justify-content:space-between;
+      padding:28px; background:linear-gradient(90deg,#fff, #fbfdff);
+      border-radius:12px;
+    }
+    .hero-left{flex:1}
+    .name{font-size:1.9rem; margin:0 0 6px 0; font-weight:700}
+    .tag{color:var(--muted); margin:0 0 14px 0}
+    .cta{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-block; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600;
+      border:none; cursor:pointer;
+    }
+    .btn-primary{background:var(--accent); color:#fff}
+    .btn-ghost{background:transparent; color:var(--accent); border:2px solid var(--accent)}
+    .profile{
+      width:120px; height:120px; border-radius:999px; background:#eee; flex-shrink:0;
+      display:flex; align-items:center; justify-content:center; overflow:hidden;
+      border:4px solid rgba(11,81,169,0.08);
+    }
+    .profile img{width:100%; height:100%; object-fit:cover}
+    section{margin-top:20px}
+    h2{margin:0 0 12px 0; font-size:1.2rem}
+    p.lead{color:var(--muted); margin:0 0 12px 0}
+    .projects{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+    .card{background:var(--card); padding:14px; border-radius:10px; box-shadow:0 6px 20px rgba(17,17,17,0.04)}
+    .card h3{margin:0 0 6px 0; font-size:1rem}
+    .card p{margin:0 0 8px 0; color:var(--muted); font-size:0.95rem}
+    footer{margin-top:28px; text-align:center; color:var(--muted); font-size:0.9rem}
+    /* responsive */
+    @media (max-width:720px){
+      header.hero{flex-direction:column; align-items:flex-start}
+      .profile{width:96px;height:96px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <div class="hero-left">
+        <h1 class="name">Kayumov Asadbek</h1>
+        <p class="tag">Integrated Business Management student • Dong-A University • Student portfolio</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="resume.pdf" download>Download CV</a>
+        </div>
+      </div>
+      <div class="profile" aria-hidden="true">
+        <!-- Replace with your photo: assets/me.jpg -->
+        <img src="https://via.placeholder.com/300x300.png?text=Your+Photo" alt="Your photo">
+      </div>
+    </header>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p class="lead">Hello — I’m a student at Dong-A University (Integrated Business Management). I build projects, run student clubs, and work on community projects like tree-planting and local events. I enjoy product ideas, business strategy, and learning full-stack basics.</p>
+      <p>Skills: Project leadership • Basic web development (HTML/CSS) • Video editing • Event organization</p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects & Achievements</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Green Busan</h3>
+          <p>Co-founded a community greening project — tree planting & park cleanups in Busan with student volunteers.</p>
+          <p><a href="#" target="_blank" rel="noopener">Read more</a></p>
+        </article>
+
+        <article class="card">
+          <h3>FC Hawk — Student Football Club</h3>
+          <p>Founded a semi-pro university football club, organized training and matches, handled communications and growth.</p>
+          <p><a href="#" target="_blank" rel="noopener">Learn more</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Harkun App (in dev)</h3>
+          <p>Co-founder of an AI-powered app to support Muslim residents in Korea — planning features and MVP development.</p>
+          <p><a href="#" target="_blank" rel="noopener">Project notes</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p class="lead">Email: <a href="mailto:youremail@example.com">asadbekkayumov47@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/asadbekkayumov" target="_blank" rel="noopener">github.com/YOUR_GITHUB_USERNAME</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">linkedin.com/in/YOUR_LINKEDIN</a></p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Kayumov Asadbek — Student Portfolio
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
