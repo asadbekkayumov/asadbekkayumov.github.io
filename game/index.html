@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Falling Rock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Catch the Falling Rock!</h1>
+    
+    <label for="difficulty">Choose Difficulty:</label>
+    <select id="difficulty">
+        <option value="2">Easy</option>
+        <option value="5" selected>Medium</option>
+        <option value="8">Gigachad</option>
+    </select>
+
+    <div id="gameArea">
+        <div id="player"></div>
+        <div id="object"></div>
+    </div>
+
+    <p>Score: <span id="score">0</span></p>
+    <button id="restartBtn" style="display:none;">Start</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
